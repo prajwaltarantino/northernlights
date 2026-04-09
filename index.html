@@ -70,9 +70,33 @@
 .hero-section img {
   transform: scale(1.15);
 }
+#loader {
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+#loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
   </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-fixed">
+  <!-- LOADING SCREEN -->
+<div id="loader" class="fixed inset-0 bg-background flex items-center justify-center z-[9999]">
+  
+  <div class="text-center">
+    
+    <!-- YOUR LOGO -->
+    <img src="images\logo.svg" alt="Logo" class="w-40 md:w-56 mx-auto mb-6 animate-pulse">
+
+    <!-- BRAND NAME -->
+    <h2 class="text-primary font-headline text-xl tracking-widest">
+      Puravankara Northern Lights
+    </h2>
+
+  </div>
+
+</div>
 
 <div class="bg-primary-container text-on-primary-fixed py-2 overflow-hidden relative z-[60]">
   <div class="marquee-track whitespace-nowrap text-sm font-label tracking-widest uppercase">
@@ -455,6 +479,15 @@
     duration: 1.2,
     stagger: 0.15,
     ease: "power4.out"
+  });
+</script>
+<script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+      loader.classList.add("hide");
+    }, 1200); // 1.2 sec delay for premium feel
   });
 </script>
 </body>
