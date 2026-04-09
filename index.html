@@ -4,12 +4,10 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Puravankara Northern Lights | Luxury Living in North Bangalore</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <script id="tailwind-config">
+  <script>
     tailwind.config = {
       darkMode: "class",
       theme: {
@@ -19,49 +17,16 @@
             "primary-container": "#d4af37",
             "on-surface-variant": "#d0c5af",
             "on-primary-fixed": "#241a00",
-            "on-tertiary": "#082b72",
-            "surface-dim": "#10141a",
-            "on-tertiary-fixed-variant": "#27438a",
-            "surface-container-lowest": "#0a0e14",
-            "secondary-fixed-dim": "#dac58d",
-            "on-secondary-container": "#c8b37d",
-            "outline": "#99907c",
-            "tertiary": "#bfcdff",
-            "outline-variant": "#4d4635",
-            "primary-fixed": "#ffe088",
-            "surface-bright": "#353940",
-            "on-background": "#dfe2eb",
-            "secondary-fixed": "#f7e1a6",
-            "inverse-on-surface": "#2d3137",
             "surface-container-low": "#181c22",
-            "on-error": "#690005",
-            "inverse-surface": "#dfe2eb",
+            "outline": "#99907c",
+            "outline-variant": "#4d4635",
             "primary": "#f2ca50",
-            "surface-variant": "#31353c",
             "surface-container-highest": "#31353c",
-            "inverse-primary": "#735c00",
-            "error": "#ffb4ab",
-            "on-primary-fixed-variant": "#574500",
-            "tertiary-fixed-dim": "#b4c5ff",
             "surface-container": "#1c2026",
             "background": "#10141a",
-            "secondary": "#dac58d",
-            "on-secondary-fixed": "#241a00",
-            "tertiary-fixed": "#dbe1ff",
-            "on-tertiary-fixed": "#00174b",
-            "on-primary-container": "#554300",
-            "on-primary": "#3c2f00",
-            "tertiary-container": "#97b0ff",
-            "surface-tint": "#e9c349",
             "surface-container-high": "#262a31",
-            "on-secondary-fixed-variant": "#544519",
-            "secondary-container": "#544519",
-            "on-secondary": "#3c2f05",
-            "on-error-container": "#ffdad6",
-            "on-tertiary-container": "#254188",
             "surface": "#10141a",
-            "on-surface": "#dfe2eb",
-            "error-container": "#93000a"
+            "on-surface": "#dfe2eb"
           },
           fontFamily: {
             "headline": ["Noto Serif"],
@@ -73,126 +38,101 @@
             "lg": "0.25rem",
             "xl": "0.5rem",
             "full": "0.75rem"
-          },
-        },
-      },
+          }
+        }
+      }
     }
   </script>
-
   <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-    }
-    .glass-morphism {
-      background: rgba(24, 28, 34, 0.6);
-      backdrop-filter: blur(20px);
-    }
-    .gold-gradient {
-      background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%);
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    .hero-content > *,
-    .hero-cards > div,
-    .reveal-section,
-    .video-section,
-    .parallax-image {
-      will-change: transform, opacity;
-    }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .glass-morphism { background: rgba(24, 28, 34, 0.6); backdrop-filter: blur(20px); }
+    .gold-gradient { background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%); }
+    html { scroll-behavior: smooth; }
+    .hero-content > *, .hero-cards > div, .reveal-section, .video-section, .parallax-image { will-change: transform, opacity; }
+    .marquee-track {
+  display: inline-block;
+  min-width: 200%;
+  animation: marqueeLeft 18s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
   </style>
 </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-fixed">
 
-<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
-
-  <!-- Urgency Strip -->
-  <div class="bg-primary-container text-on-primary-fixed text-center py-2 px-4 text-sm font-label tracking-widest uppercase relative z-[60]">
-    🔥 Units Filling Fast | Limited Inventory Available
+<div class="bg-primary-container text-on-primary-fixed py-2 overflow-hidden relative z-[60]">
+  <div class="marquee-track whitespace-nowrap text-sm font-label tracking-widest uppercase">
+    <span class="mx-8">🔥 Units Filling Fast | Limited Inventory Available</span>
+    <span class="mx-8">🔥 Units Filling Fast | Limited Inventory Available</span>
+    <span class="mx-8">🔥 Units Filling Fast | Limited Inventory Available</span>
+    <span class="mx-8">🔥 Units Filling Fast | Limited Inventory Available</span>
   </div>
+</div>
 
-  <!-- TopNavBar -->
-  <nav class="fixed top-8 left-0 w-full z-50 px-4 md:px-8">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-4 bg-[#10141a]/60 backdrop-blur-md rounded-lg">
-      <div class="text-xl font-bold text-[#D4AF37] tracking-wider font-headline">
-        Puravankara Northern Lights
+  <nav class="relative w-full z-50 px-4 md:px-8 pt-4">
+    <div class="max-w-7xl mx-auto bg-[#10141a]/60 backdrop-blur-md rounded-lg border border-primary/10">
+      <div class="flex justify-between items-center px-4 md:px-8 py-4">
+        <div class="text-xl font-bold text-[#D4AF37] tracking-wider font-headline">Puravankara Northern Lights</div>
+
+        <div class="hidden md:flex gap-8 items-center">
+          <a class="text-[#D4AF37] border-b border-[#D4AF37] pb-1 font-label text-sm uppercase tracking-widest" href="#highlights">Highlights</a>
+          <a class="text-on-surface-variant hover:text-[#D4AF37] transition-colors font-label text-sm uppercase tracking-widest" href="#location">Location</a>
+          <a class="text-on-surface-variant hover:text-[#D4AF37] transition-colors font-label text-sm uppercase tracking-widest" href="#pricing">Pricing</a>
+          <a class="text-on-surface-variant hover:text-[#D4AF37] transition-colors font-label text-sm uppercase tracking-widest" href="#invest">Invest</a>
+          <a href="#register-now" class="border border-primary-container text-primary-container px-6 py-2 hover:bg-surface-variant transition-all font-label text-sm uppercase tracking-widest rounded-lg">Book Visit</a>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden text-primary">
+          <span id="mobileMenuIcon" class="material-symbols-outlined">menu</span>
+        </button>
       </div>
 
-      <div class="hidden md:flex gap-8 items-center">
-        <a class="text-[#D4AF37] border-b border-[#D4AF37] pb-1 font-label text-sm uppercase tracking-widest" href="#highlights">Highlights</a>
-        <a class="text-on-surface-variant hover:text-[#D4AF37] transition-colors font-label text-sm uppercase tracking-widest" href="#location">Location</a>
-        <a class="text-on-surface-variant hover:text-[#D4AF37] transition-colors font-label text-sm uppercase tracking-widest" href="#pricing">Pricing</a>
-        <a class="text-on-surface-variant hover:text-[#D4AF37] transition-colors font-label text-sm uppercase tracking-widest" href="#invest">Invest</a>
-        <a href="#register-now" class="border border-primary-container text-primary-container px-6 py-2 hover:bg-surface-variant transition-all font-label text-sm uppercase tracking-widest">
-          Book Visit
-        </a>
+      <div id="mobileMenu" class="hidden md:hidden px-6 pb-6 pt-2">
+        <div class="flex flex-col gap-4 border-t border-primary/20 pt-4">
+          <a href="#highlights" class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">Highlights</a>
+          <a href="#location" class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">Location</a>
+          <a href="#pricing" class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">Pricing</a>
+          <a href="#invest" class="mobile-nav-link text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">Invest</a>
+          <a href="#register-now" class="mobile-nav-link border border-primary-container text-primary-container px-4 py-3 text-center font-label text-sm uppercase tracking-widest rounded-lg">Book Visit</a>
+        </div>
       </div>
-
-      <button class="md:hidden text-primary">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero-section relative min-h-screen flex items-center pt-20 overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img alt="" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRYOk5jEFF3XLO9tZ6Az2khfKk1xZJp7QjcZVcNHaF56OguvEv0mvJ1vPVTjsBGuYbLLuDF2Wx3lowafG0l77nZym3YCadg4DgzFX8jZe5hlX96GwcdBLtnU-NaMG3-7l263CKxR1ybJp492YWO4waNz1zlfFJukYtFafHr6UGW4lPJng7LVHS5rBdjq5jeY5sfxtUcER23Yad3oPBW_xQQg-WjtJYoduQ5QXLVJxTEZHhXBh8L0AabEofJZDafHKjW-Y2RWjkYU"/>
       <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
     </div>
-
     <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
       <div class="hero-content max-w-3xl">
         <span class="inline-block text-primary font-label text-sm uppercase tracking-[0.3em] mb-4">North Bangalore's Premier Address</span>
-
-        <h1 class="text-5xl md:text-7xl font-headline text-on-surface leading-tight mb-6">
-          North Bangalore’s <span class="italic text-primary-fixed-dim">Fastest Growing</span> Investment Zone
-        </h1>
-
-        <p class="text-xl md:text-2xl font-light text-on-surface-variant mb-10 max-w-2xl leading-relaxed">
-          Puravankara Northern Lights – Premium Homes just 5–6 KM from Airport in Bangalore’s fastest growing investment corridor with high future appreciation potential.
-        </p>
+        <h1 class="text-5xl md:text-7xl font-headline text-on-surface leading-tight mb-6">North Bangalore’s <span class="italic text-primary-fixed-dim">Fastest Growing</span> Investment Zone</h1>
+        <p class="text-xl md:text-2xl font-light text-on-surface-variant mb-10 max-w-2xl leading-relaxed">Puravankara Northern Lights – Premium Homes just 5–6 KM from Airport in Bangalore’s fastest growing investment corridor with high future appreciation potential.</p>
 
         <div class="hero-cards grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
-          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container">
-            <span class="block text-primary font-bold text-lg">2, 3 &amp; 4 BHK</span>
-            <span class="text-xs uppercase tracking-widest text-on-surface-variant">Luxury Homes</span>
-          </div>
-          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container">
-            <span class="block text-primary font-bold text-lg">Just 5–6 KM</span>
-            <span class="text-xs uppercase tracking-widest text-on-surface-variant">From Airport</span>
-          </div>
-          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container">
-            <span class="block text-primary font-bold text-lg">1 Lakh Sq.ft</span>
-            <span class="text-xs uppercase tracking-widest text-on-surface-variant">Clubhouse</span>
-          </div>
-          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container">
-            <span class="block text-primary font-bold text-lg">48+ Years</span>
-            <span class="text-xs uppercase tracking-widest text-on-surface-variant">Trusted Developer</span>
-          </div>
-          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container col-span-1 md:col-span-2">
-            <span class="block text-primary font-bold text-lg">Starting ₹1.11 Cr*</span>
-            <span class="text-xs uppercase tracking-widest text-on-surface-variant">Exclusive Launch Price</span>
-          </div>
+          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container"><span class="block text-primary font-bold text-lg">2, 3 &amp; 4 BHK</span><span class="text-xs uppercase tracking-widest text-on-surface-variant">Luxury Homes</span></div>
+          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container"><span class="block text-primary font-bold text-lg">Just 5–6 KM</span><span class="text-xs uppercase tracking-widest text-on-surface-variant">From Airport</span></div>
+          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container"><span class="block text-primary font-bold text-lg">1 Lakh Sq.ft</span><span class="text-xs uppercase tracking-widest text-on-surface-variant">Clubhouse</span></div>
+          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container"><span class="block text-primary font-bold text-lg">48+ Years</span><span class="text-xs uppercase tracking-widest text-on-surface-variant">Trusted Developer</span></div>
+          <div class="bg-surface-container-low p-4 rounded-lg border-l-2 border-primary-container col-span-1 md:col-span-2"><span class="block text-primary font-bold text-lg">Starting ₹1.11 Cr*</span><span class="text-xs uppercase tracking-widest text-on-surface-variant">Exclusive Launch Price</span></div>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability."
-             target="_blank"
-             rel="noopener noreferrer"
-             class="gold-gradient text-on-primary-fixed px-8 py-4 font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform">
-            <span class="material-symbols-outlined" data-weight="fill">chat</span>
-            Get Price + Availability on WhatsApp
-          </a>
-
-          <a href="#register-now" class="border border-outline-variant text-on-surface px-8 py-4 hover:bg-surface-container-high transition-all text-center">
-            Check Live Availability
-          </a>
+          <a href="https://wa.me/917996355933?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability." target="_blank" rel="noopener noreferrer" class="gold-gradient text-on-primary-fixed px-8 py-4 font-bold flex items-center justify-center gap-2 hover:scale-105 transition-transform"><span class="material-symbols-outlined" data-weight="fill">chat</span>Get Price + Availability on WhatsApp</a>
+          <button type="button" class="openLeadPopup border border-outline-variant text-on-surface px-8 py-4 hover:bg-surface-container-high transition-all text-center">Check Live Availability</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Video Walkthrough Section -->
   <section class="video-section py-24 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-8">
       <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -200,525 +140,295 @@
           <h2 class="text-4xl font-headline mb-4">Explore Northern Lights</h2>
           <p class="text-on-surface-variant max-w-xl">Take a closer look at the project, amenities, and lifestyle through our walkthrough video.</p>
         </div>
-        <div class="flex gap-4">
-          <button class="text-primary flex items-center gap-2 font-label text-sm uppercase tracking-widest">
-            <span class="material-symbols-outlined">play_circle</span> Watch Full Tour
-          </button>
-        </div>
       </div>
-
       <div class="relative rounded-xl overflow-hidden bg-surface-container-highest shadow-2xl group">
-        <div class="aspect-video">
-          <iframe allowfullscreen="" frameborder="0" height="100%" src="https://www.youtube.com/embed/y2JGmOZFtgc" title="Puravankara Northern Lights Video" width="100%"></iframe>
-        </div>
+        <div class="aspect-video"><iframe allowfullscreen frameborder="0" height="100%" src="https://www.youtube.com/embed/y2JGmOZFtgc" title="Puravankara Northern Lights Video" width="100%"></iframe></div>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined">apartment</span>
-          </div>
-          <p class="text-sm font-label uppercase tracking-widest">Real project visuals</p>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined">pool</span>
-          </div>
-          <p class="text-sm font-label uppercase tracking-widest">Amenities showcase</p>
-        </div>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary">
-            <span class="material-symbols-outlined">map</span>
-          </div>
-          <p class="text-sm font-label uppercase tracking-widest">Location insights</p>
-        </div>
+        <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined">apartment</span></div><p class="text-sm font-label uppercase tracking-widest">Real project visuals</p></div>
+        <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined">pool</span></div><p class="text-sm font-label uppercase tracking-widest">Amenities showcase</p></div>
+        <div class="flex items-center gap-4"><div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary"><span class="material-symbols-outlined">map</span></div><p class="text-sm font-label uppercase tracking-widest">Location insights</p></div>
       </div>
-
       <div class="mt-12 flex justify-center gap-4">
-        <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability."
-           target="_blank"
-           rel="noopener noreferrer"
-           class="gold-gradient text-on-primary-fixed px-6 py-3 font-bold text-sm text-center">
-          Get Price + Unit Availability
-        </a>
-
-        <a href="#register-now" class="border border-primary-container text-primary px-6 py-3 text-sm text-center">
-          Check Available Units Now
-        </a>
+        <a href="https://wa.me/917996355933?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability." target="_blank" rel="noopener noreferrer" class="gold-gradient text-on-primary-fixed px-6 py-3 font-bold text-sm text-center">Get Price + Unit Availability</a>
+        <button type="button" class="openLeadPopup border border-primary-container text-primary px-6 py-3 text-sm text-center">Check Available Units Now</button>
       </div>
     </div>
   </section>
 
-  <!-- Project Section -->
   <section class="reveal-section py-32 bg-background" id="highlights">
     <div class="max-w-7xl mx-auto px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="relative">
-          <div class="aspect-[4/5] rounded-lg overflow-hidden">
-            <img alt="" class="parallax-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApRLPKP-0tX2HkFiHDqoQTFwrAwrDMbQ1faqGttk-K9QMdzPsqBcVUzJ0SselHn-mcAeIMo5d1wBWTCTMzmm-kTS_ST06phZ8k07JmveLAT8Jg9UsyJM41zbuiduPfW149ctQvpqOlXAdN_MzCjmzrCdaN51t8ueq05vKioLKvxdRvLXQ8sEg4M5WCN1PLBxkUAlHbMqSWmxEfJsn-E-umEpvNd179Z8xilROr30md2A28SrxWPQrroCdvdOgn7ELo81aQI1zLP5E"/>
-          </div>
-          <div class="absolute -bottom-8 -right-8 w-1/2 aspect-square rounded-lg overflow-hidden border-8 border-background hidden md:block">
-            <img alt="" class="parallax-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDelvcmW-NUjv0K00Twb1t2X4EABOGzgWR3HSTuCT46yLLa3YS496fmrkKRC5Cruk1m4AetCKVBEZLbi5i_x7eBmbMVgJ9Iv_NZ3w1_BXB5dQWEYOL7NXqsQoNCwp0tyBAO8cROF_IOjwkVANX6067C_YgLMDyuEx6lJvsmx6GzwPsfAVsijtb_2NQJbQQKEo0fxDEbN-NMQNFEGzwyD3MiLAOyIy9uZSxWhvpD7PUvFLCg3PiSYV4XBpLOfOKcJTq_Sm4mUzHI7m0"/>
-          </div>
+          <div class="aspect-[4/5] rounded-lg overflow-hidden"><img alt="" class="parallax-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApRLPKP-0tX2HkFiHDqoQTFwrAwrDMbQ1faqGttk-K9QMdzPsqBcVUzJ0SselHn-mcAeIMo5d1wBWTCTMzmm-kTS_ST06phZ8k07JmveLAT8Jg9UsyJM41zbuiduPfW149ctQvpqOlXAdN_MzCjmzrCdaN51t8ueq05vKioLKvxdRvLXQ8sEg4M5WCN1PLBxkUAlHbMqSWmxEfJsn-E-umEpvNd179Z8xilROr30md2A28SrxWPQrroCdvdOgn7ELo81aQI1zLP5E"/></div>
+          <div class="absolute -bottom-8 -right-8 w-1/2 aspect-square rounded-lg overflow-hidden border-8 border-background hidden md:block"><img alt="" class="parallax-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDelvcmW-NUjv0K00Twb1t2X4EABOGzgWR3HSTuCT46yLLa3YS496fmrkKRC5Cruk1m4AetCKVBEZLbi5i_x7eBmbMVgJ9Iv_NZ3w1_BXB5dQWEYOL7NXqsQoNCwp0tyBAO8cROF_IOjwkVANX6067C_YgLMDyuEx6lJvsmx6GzwPsfAVsijtb_2NQJbQQKEo0fxDEbN-NMQNFEGzwyD3MiLAOyIy9uZSxWhvpD7PUvFLCg3PiSYV4XBpLOfOKcJTq_Sm4mUzHI7m0"/></div>
         </div>
-
         <div class="space-y-8">
           <h2 class="text-5xl font-headline leading-tight">Premium Township Living in <span class="text-primary italic">North Bangalore</span></h2>
-
           <div class="space-y-6">
-            <div class="flex gap-6 items-start">
-              <span class="text-primary-container font-headline text-3xl">01</span>
-              <div>
-                <h3 class="text-xl font-bold mb-2">Large-scale township</h3>
-                <p class="text-on-surface-variant">A sprawling master-planned community offering an integrated lifestyle within its secure boundaries.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-6 items-start">
-              <span class="text-primary-container font-headline text-3xl">02</span>
-              <div>
-                <h3 class="text-xl font-bold mb-2">Spacious layouts</h3>
-                <p class="text-on-surface-variant">Designed with architectural precision to maximize natural light and ensure privacy for every residence.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-6 items-start">
-              <span class="text-primary-container font-headline text-3xl">03</span>
-              <div>
-                <h3 class="text-xl font-bold mb-2">Premium lifestyle</h3>
-                <p class="text-on-surface-variant">Access to elite amenities including a state-of-the-art clubhouse, sports courts, and wellness zones.</p>
-              </div>
-            </div>
-
-            <div class="flex gap-6 items-start">
-              <span class="text-primary-container font-headline text-3xl">04</span>
-              <div>
-                <h3 class="text-xl font-bold mb-2">Designed for long-term value</h3>
-                <p class="text-on-surface-variant">Built to international standards, ensuring your home remains a high-yielding asset for decades.</p>
-              </div>
-            </div>
+            <div class="flex gap-6 items-start"><span class="text-primary-container font-headline text-3xl">01</span><div><h3 class="text-xl font-bold mb-2">Large-scale township</h3><p class="text-on-surface-variant">A sprawling master-planned community offering an integrated lifestyle within its secure boundaries.</p></div></div>
+            <div class="flex gap-6 items-start"><span class="text-primary-container font-headline text-3xl">02</span><div><h3 class="text-xl font-bold mb-2">Spacious layouts</h3><p class="text-on-surface-variant">Designed with architectural precision to maximize natural light and ensure privacy for every residence.</p></div></div>
+            <div class="flex gap-6 items-start"><span class="text-primary-container font-headline text-3xl">03</span><div><h3 class="text-xl font-bold mb-2">Premium lifestyle</h3><p class="text-on-surface-variant">Access to elite amenities including a state-of-the-art clubhouse, sports courts, and wellness zones.</p></div></div>
+            <div class="flex gap-6 items-start"><span class="text-primary-container font-headline text-3xl">04</span><div><h3 class="text-xl font-bold mb-2">Designed for long-term value</h3><p class="text-on-surface-variant">Built to international standards, ensuring your home remains a high-yielding asset for decades.</p></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Investment Section -->
   <section class="reveal-section py-24 bg-surface-container-low" id="invest">
     <div class="max-w-7xl mx-auto px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-headline mb-4">Why North Bangalore is <span class="text-primary">Booming</span></h2>
-        <p class="text-on-surface-variant text-lg">The epicenter of Bangalore's next growth wave.</p>
-      </div>
-
+      <div class="text-center mb-16"><h2 class="text-4xl md:text-5xl font-headline mb-4">Why North Bangalore is <span class="text-primary">Booming</span></h2><p class="text-on-surface-variant text-lg">The epicenter of Bangalore's next growth wave.</p></div>
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div class="bg-background p-8 border-b-4 border-primary-container">
-          <span class="material-symbols-outlined text-primary text-4xl mb-4">flight_takeoff</span>
-          <h4 class="font-bold mb-2">Airport-driven growth</h4>
-          <p class="text-sm text-on-surface-variant">Proximity to KIAL ensures consistent infrastructure upgrades and connectivity.</p>
-        </div>
-        <div class="bg-background p-8 border-b-4 border-primary-container">
-          <span class="material-symbols-outlined text-primary text-4xl mb-4">construction</span>
-          <h4 class="font-bold mb-2">Infrastructure expansion</h4>
-          <p class="text-sm text-on-surface-variant">Widened highways and upcoming Metro connectivity transforming the commute.</p>
-        </div>
-        <div class="bg-background p-8 border-b-4 border-primary-container">
-          <span class="material-symbols-outlined text-primary text-4xl mb-4">trending_up</span>
-          <h4 class="font-bold mb-2">Increasing demand</h4>
-          <p class="text-sm text-on-surface-variant">High demand from IT professionals and airport personnel driving rentals.</p>
-        </div>
-        <div class="bg-background p-8 border-b-4 border-primary-container">
-          <span class="material-symbols-outlined text-primary text-4xl mb-4">account_balance_wallet</span>
-          <h4 class="font-bold mb-2">Appreciation potential</h4>
-          <p class="text-sm text-on-surface-variant">Property values projected to rise significantly with the KIADB development.</p>
-        </div>
+        <div class="bg-background p-8 border-b-4 border-primary-container"><span class="material-symbols-outlined text-primary text-4xl mb-4">flight_takeoff</span><h4 class="font-bold mb-2">Airport-driven growth</h4><p class="text-sm text-on-surface-variant">Proximity to KIAL ensures consistent infrastructure upgrades and connectivity.</p></div>
+        <div class="bg-background p-8 border-b-4 border-primary-container"><span class="material-symbols-outlined text-primary text-4xl mb-4">construction</span><h4 class="font-bold mb-2">Infrastructure expansion</h4><p class="text-sm text-on-surface-variant">Widened highways and upcoming Metro connectivity transforming the commute.</p></div>
+        <div class="bg-background p-8 border-b-4 border-primary-container"><span class="material-symbols-outlined text-primary text-4xl mb-4">trending_up</span><h4 class="font-bold mb-2">Increasing demand</h4><p class="text-sm text-on-surface-variant">High demand from IT professionals and airport personnel driving rentals.</p></div>
+        <div class="bg-background p-8 border-b-4 border-primary-container"><span class="material-symbols-outlined text-primary text-4xl mb-4">account_balance_wallet</span><h4 class="font-bold mb-2">Appreciation potential</h4><p class="text-sm text-on-surface-variant">Property values projected to rise significantly with the KIADB development.</p></div>
       </div>
-
-      <div class="mt-12 text-center">
-        <p class="text-xl font-headline text-primary-fixed italic">👉 Early buyers are already entering the market.</p>
-      </div>
+      <div class="mt-12 text-center"><p class="text-xl font-headline text-primary-fixed italic">👉 Early buyers are already entering the market.</p></div>
     </div>
   </section>
 
-  <!-- Location Section -->
   <section class="reveal-section py-32 bg-background" id="location">
     <div class="max-w-7xl mx-auto px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
         <div class="lg:col-span-5">
           <h2 class="text-4xl font-headline mb-8 leading-tight">Located in High-Growth Airport Corridor</h2>
-
           <ul class="space-y-6">
-            <li class="flex items-center gap-4 text-lg">
-              <span class="material-symbols-outlined text-primary">distance</span>
-              5–6 KM from Airport
-            </li>
-            <li class="flex items-center gap-4 text-lg">
-              <span class="material-symbols-outlined text-primary">location_city</span>
-              Located in KIADB growth zone
-            </li>
-            <li class="flex items-center gap-4 text-lg">
-              <span class="material-symbols-outlined text-primary">business_center</span>
-              Upcoming business hubs
-            </li>
-            <li class="flex items-center gap-4 text-lg">
-              <span class="material-symbols-outlined text-primary">settings_input_component</span>
-              Strong infrastructure development
-            </li>
+            <li class="flex items-center gap-4 text-lg"><span class="material-symbols-outlined text-primary">distance</span>5–6 KM from Airport</li>
+            <li class="flex items-center gap-4 text-lg"><span class="material-symbols-outlined text-primary">location_city</span>Located in KIADB growth zone</li>
+            <li class="flex items-center gap-4 text-lg"><span class="material-symbols-outlined text-primary">business_center</span>Upcoming business hubs</li>
+            <li class="flex items-center gap-4 text-lg"><span class="material-symbols-outlined text-primary">settings_input_component</span>Strong infrastructure development</li>
           </ul>
-
           <div class="mt-12 p-8 bg-surface-container-low rounded-lg">
-            <h4 class="text-2xl font-headline text-primary mb-2" id="pricing">
-              Current Pricing: Starting from ₹1.11 Cr*
-            </h4>
-            <p class="text-on-surface-variant italic">
-              👉 Prices increasing as units are getting booked fast
-            </p>
+            <h4 class="text-2xl font-headline text-primary mb-2" id="pricing">Current Pricing: Starting from ₹1.11 Cr*</h4>
+            <p class="text-on-surface-variant italic">👉 Prices increasing as units are getting booked fast</p>
           </div>
         </div>
-
         <div class="lg:col-span-7">
-          <p class="text-primary mb-4 font-semibold text-center">
-            Explore Exact Project Location (Live Street View)
-          </p>
-
+          <p class="text-primary mb-4 font-semibold text-center">Explore Exact Project Location (Live Street View)</p>
           <div class="relative h-[500px] rounded-xl overflow-hidden shadow-2xl">
             <div id="mapOverlay" class="absolute inset-0 bg-black/70 backdrop-blur-md flex flex-col items-center justify-center text-center z-20 px-6">
-              <h3 class="text-white text-xl font-bold mb-2">
-                🔒 Unlock Exact Location
-              </h3>
-
-              <p class="text-white/80 text-sm mb-4">
-                Submit the form to view exact project location
-              </p>
-
-              <a href="#register-now" class="gold-gradient px-6 py-3 text-sm font-bold text-black rounded-lg">
-                Unlock Now
-              </a>
+              <h3 class="text-white text-xl font-bold mb-2">🔒 Unlock Exact Location</h3>
+              <p class="text-white/80 text-sm mb-4">Submit the form to view exact project location</p>
+              <button id="unlockNowBtn" type="button" class="gold-gradient px-6 py-3 text-sm font-bold text-black rounded-lg">Unlock Now</button>
             </div>
-
-            <iframe
-              id="projectMap"
-              src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sin!4v1775210180511!5m2!1sen!2sin!6m8!1m7!1sQDBs1W6eB1BLB7gVv1uubA!2m2!1d13.14341917908861!2d77.67541242857253!3f198.37198986944435!4f6.6200413780628935!5f0.7820865974627469"
-              class="w-full h-full pointer-events-none"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <iframe id="projectMap" src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sin!4v1775210180511!5m2!1sen!2sin!6m8!1m7!1sQDBs1W6eB1BLB7gVv1uubA!2m2!1d13.14341917908861!2d77.67541242857253!3f198.37198986944435!4f6.6200413780628935!5f0.7820865974627469" class="w-full h-full pointer-events-none" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-
           <div class="mt-4 text-center">
-            <a id="mapBtn"
-               href="#"
-               class="inline-flex items-center gap-3 bg-primary-container text-on-primary-fixed px-6 py-3 rounded-lg font-bold opacity-50 cursor-not-allowed">
-              <span class="material-symbols-outlined">directions</span>
-              Open Location & Get Directions
-            </a>
+            <a id="mapBtn" href="#" class="inline-flex items-center gap-3 bg-primary-container text-on-primary-fixed px-6 py-3 rounded-lg font-bold opacity-50 cursor-not-allowed"><span class="material-symbols-outlined">directions</span>Open Location & Get Directions</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Form & CTA Section -->
   <section id="register-now" class="reveal-section py-24 bg-surface-container-high relative">
     <div class="max-w-7xl mx-auto px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <h2 class="text-5xl font-headline mb-6">Schedule Your Visit Before <span class="text-primary">Units Sell Out</span></h2>
           <p class="text-on-surface-variant text-xl mb-8">Join the exclusive league of Puravankara homeowners.</p>
-
           <div class="space-y-4 mb-10">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-primary">verified</span>
-              <span>Limited inventory available</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-primary">trending_up</span>
-              <span>High demand project in prime zone</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-primary">event_available</span>
-              <span>Direct booking available with priority allotment</span>
-            </div>
+            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">verified</span><span>Limited inventory available</span></div>
+            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">trending_up</span><span>High demand project in prime zone</span></div>
+            <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">event_available</span><span>Direct booking available with priority allotment</span></div>
           </div>
-
           <div class="flex items-center gap-4 p-4 border border-outline-variant w-fit rounded-lg">
-            <div class="text-primary">
-              <span class="material-symbols-outlined text-4xl" data-weight="fill">workspace_premium</span>
-            </div>
-            <div>
-              <p class="font-bold leading-tight">48+ Years Developer</p>
-              <p class="text-xs text-on-surface-variant uppercase tracking-widest">Legacy of Excellence</p>
-            </div>
+            <div class="text-primary"><span class="material-symbols-outlined text-4xl" data-weight="fill">workspace_premium</span></div>
+            <div><p class="font-bold leading-tight">48+ Years Developer</p><p class="text-xs text-on-surface-variant uppercase tracking-widest">Legacy of Excellence</p></div>
           </div>
         </div>
-
         <div class="bg-background p-10 rounded-xl shadow-2xl">
           <h3 class="text-2xl font-headline mb-8">Register for Instant Access</h3>
-
-          <p class="text-primary mb-6">
-            Limited units available in this phase.
-          </p>
-
+          <p class="text-primary mb-6">Limited units available in this phase.</p>
           <form id="leadForm">
-            <div class="space-y-1">
-              <label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Name</label>
-              <input
-                name="name"
-                class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface"
-                type="text"
-                required
-              />
-            </div>
-
-            <div class="space-y-1 mt-6">
-              <label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Phone</label>
-              <input
-                name="phone"
-                class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface"
-                type="tel"
-                required
-              />
-            </div>
-
+            <div class="space-y-1"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Name</label><input name="name" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface" type="text" required/></div>
+            <div class="space-y-1 mt-6"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Phone</label><input name="phone" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface" type="tel" required/></div>
             <div class="grid grid-cols-2 gap-6 mt-6">
-              <div class="space-y-1">
-                <label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Budget</label>
-                <select
-                  name="budget"
-                  class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-2 text-on-surface appearance-none"
-                  required
-                >
-                  <option class="bg-surface" value="₹1.11 Cr - ₹1.5 Cr">₹1.11 Cr - ₹1.5 Cr</option>
-                  <option class="bg-surface" value="₹1.5 Cr - ₹2 Cr">₹1.5 Cr - ₹2 Cr</option>
-                  <option class="bg-surface" value="₹2 Cr - ₹4 Cr">₹2 Cr - ₹4 Cr</option>
-                  <option class="bg-surface" value="Above ₹4 Cr">Above ₹4 Cr</option>
-                </select>
-              </div>
-
-              <div class="space-y-1">
-                <label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Purpose</label>
-                <select
-                  name="purpose"
-                  class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-2 text-on-surface appearance-none"
-                  required
-                >
-                  <option class="bg-surface" value="Investment">Investment</option>
-                  <option class="bg-surface" value="Self-Use">Self-Use</option>
-                </select>
-              </div>
+              <div class="space-y-1"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Budget</label><select name="budget" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-2 text-on-surface appearance-none" required><option class="bg-surface" value="₹1.11 Cr - ₹1.5 Cr">₹1.11 Cr - ₹1.5 Cr</option><option class="bg-surface" value="₹1.5 Cr - ₹2 Cr">₹1.5 Cr - ₹2 Cr</option><option class="bg-surface" value="₹2 Cr - ₹4 Cr">₹2 Cr - ₹4 Cr</option><option class="bg-surface" value="Above ₹4 Cr">Above ₹4 Cr</option></select></div>
+              <div class="space-y-1"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Purpose</label><select name="purpose" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-2 text-on-surface appearance-none" required><option class="bg-surface" value="Investment">Investment</option><option class="bg-surface" value="Self-Use">Self-Use</option></select></div>
             </div>
-
-            <button type="submit" class="w-full gold-gradient text-on-primary-fixed py-4 font-bold text-lg flex items-center justify-center gap-3 mt-8">
-              Check Price & Book Site Visit
-            </button>
-
-            <p id="formMessage" class="text-center text-xs text-on-surface-variant mt-4">
-              Response within 5 minutes | Priority Concierge
-            </p>
+            <button type="submit" class="w-full gold-gradient text-on-primary-fixed py-4 font-bold text-lg flex items-center justify-center gap-3 mt-8">Check Price & Book Site Visit</button>
+            <p id="formMessage" class="text-center text-xs text-on-surface-variant mt-4">Response within 5 minutes | Priority Concierge</p>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-[#10141a] border-t border-[#262a31] py-16 px-8">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12">
-      <div class="space-y-4">
-        <div class="text-lg font-['Noto_Serif'] text-[#D4AF37] tracking-widest uppercase">Puravankara</div>
-        <p class="text-xs font-['Manrope'] text-on-surface-variant max-w-md">© 2024 Puravankara Limited. 48+ Years of Legacy. Transforming lifestyles across the nation with world-class residential and commercial spaces.</p>
-      </div>
-
-      <div class="flex flex-wrap gap-8">
-        <a class="text-xs font-['Manrope'] text-on-surface-variant hover:text-white transition-colors" href="#">Privacy Policy</a>
-        <a class="text-xs font-['Manrope'] text-on-surface-variant hover:text-white transition-colors" href="#">RERA Details</a>
-        <a class="text-xs font-['Manrope'] text-on-surface-variant hover:text-white transition-colors" href="#">Disclaimer</a>
-        <a class="text-xs font-['Manrope'] text-on-surface-variant hover:text-white transition-colors" href="#">Contact Us</a>
-      </div>
+      <div class="space-y-4"><div class="text-lg font-['Noto_Serif'] text-[#D4AF37] tracking-widest uppercase">Puravankara</div><p class="text-xs font-['Manrope'] text-on-surface-variant max-w-md">© 2024 Puravankara Limited. 48+ Years of Legacy. Transforming lifestyles across the nation with world-class residential and commercial spaces.</p></div>
+      <div class="flex flex-wrap gap-8"><a class="text-xs text-on-surface-variant hover:text-white transition-colors" href="#">Privacy Policy</a><a class="text-xs text-on-surface-variant hover:text-white transition-colors" href="#">RERA Details</a><a class="text-xs text-on-surface-variant hover:text-white transition-colors" href="#">Disclaimer</a><a class="text-xs text-on-surface-variant hover:text-white transition-colors" href="#">Contact Us</a></div>
     </div>
   </footer>
 
-  <!-- Floating Conversion Elements -->
   <div class="hidden md:block fixed bottom-24 right-6 z-50">
-    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability."
-       target="_blank"
-       rel="noopener noreferrer"
-       class="w-16 h-16 rounded-full glass-morphism flex items-center justify-center text-primary shadow-2xl border border-primary/20 hover:scale-110 transition-transform animate-pulse">
-      <span class="material-symbols-outlined text-3xl" data-weight="fill">chat</span>
-    </a>
+    <a href="https://wa.me/917996355933?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability." target="_blank" rel="noopener noreferrer" class="w-16 h-16 rounded-full glass-morphism flex items-center justify-center text-primary shadow-2xl border border-primary/20 hover:scale-110 transition-transform animate-pulse"><span class="material-symbols-outlined text-3xl" data-weight="fill">chat</span></a>
   </div>
 
-  <!-- Sticky Mobile CTA -->
   <div class="md:hidden fixed bottom-0 left-0 w-full glass-morphism border-t border-primary/20 p-4 flex gap-4 z-40">
-    <a href="#register-now"
-       class="flex-1 border border-primary text-primary py-3 font-label text-xs uppercase tracking-widest text-center">
-      Check Price
-    </a>
-
-    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability."
-       target="_blank"
-       rel="noopener noreferrer"
-       class="flex-[2] gold-gradient text-on-primary-fixed py-3 font-bold text-xs uppercase tracking-widest text-center">
-      WhatsApp Now
-    </a>
+    <button type="button" class="openLeadPopup flex-1 border border-primary text-primary py-3 font-label text-xs uppercase tracking-widest text-center">Check Price</button>
+    <a href="https://wa.me/917996355933?text=Hi%2C%20I%20am%20interested%20in%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability." target="_blank" rel="noopener noreferrer" class="flex-[2] gold-gradient text-on-primary-fixed py-3 font-bold text-xs uppercase tracking-widest text-center">WhatsApp Now</a>
   </div>
 
-  <!-- SUCCESS POPUP -->
-  <div id="successPopup" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[999] hidden">
-    <div class="bg-surface-container p-10 rounded-xl text-center max-w-md mx-4 shadow-2xl">
-      <h2 class="text-3xl font-headline text-primary mb-4">
-        ✅ Request Submitted
-      </h2>
-      <p class="text-on-surface-variant mb-6">
-        Unlocking location details for you...
-      </p>
-      <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden mb-4">
-        <div class="bg-primary h-full animate-pulse w-full"></div>
-      </div>
-      <p class="text-sm text-on-surface-variant">
-        Please wait a moment...
-      </p>
+  <div id="leadPopup" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[998] hidden px-4">
+    <div class="bg-background border border-primary/20 rounded-xl shadow-2xl w-full max-w-lg p-8 relative">
+      <button id="closeLeadPopup" type="button" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary transition"><span class="material-symbols-outlined">close</span></button>
+      <h3 class="text-3xl font-headline text-primary mb-3">Unlock Exact Location</h3>
+      <p class="text-on-surface-variant mb-6">Fill your details to view exact project location and get pricing instantly.</p>
+      <form id="popupLeadForm">
+        <div class="space-y-1"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Name</label><input name="name" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface" type="text" required/></div>
+        <div class="space-y-1 mt-6"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Phone</label><input name="phone" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface" type="tel" required/></div>
+        <div class="grid grid-cols-2 gap-6 mt-6">
+          <div class="space-y-1"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Budget</label><select name="budget" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-2 text-on-surface appearance-none" required><option class="bg-surface" value="₹1.11 Cr - ₹1.5 Cr">₹1.11 Cr - ₹1.5 Cr</option><option class="bg-surface" value="₹1.5 Cr - ₹2 Cr">₹1.5 Cr - ₹2 Cr</option><option class="bg-surface" value="₹2 Cr - ₹4 Cr">₹2 Cr - ₹4 Cr</option><option class="bg-surface" value="Above ₹4 Cr">Above ₹4 Cr</option></select></div>
+          <div class="space-y-1"><label class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Purpose</label><select name="purpose" class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 py-2 text-on-surface appearance-none" required><option class="bg-surface" value="Investment">Investment</option><option class="bg-surface" value="Self-Use">Self-Use</option></select></div>
+        </div>
+        <button type="submit" class="w-full gold-gradient text-on-primary-fixed py-4 font-bold text-lg flex items-center justify-center gap-3 mt-8">Unlock Location & Get Details</button>
+        <p id="popupFormMessage" class="text-center text-sm text-on-surface-variant mt-4">Response within 5 minutes | Priority Concierge</p>
+      </form>
     </div>
   </div>
 
-  <!-- GSAP -->
+  <div id="successPopup" class="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[999] hidden">
+    <div class="bg-surface-container p-10 rounded-xl text-center max-w-md mx-4 shadow-2xl">
+      <h2 class="text-3xl font-headline text-primary mb-4">✅ Request Submitted</h2>
+      <p class="text-on-surface-variant mb-6">Unlocking location details for you...</p>
+      <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden mb-4"><div class="bg-primary h-full animate-pulse w-full"></div></div>
+      <p class="text-sm text-on-surface-variant">Please wait a moment...</p>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-  <!-- Form + Unlock Script -->
   <script>
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwT0tDdDFT9pSwPfVVSsbEaMk15hN4YLAzayly5MJQbkqiPPHkjIymRH27bUinkmpC_/exec";
+    const WHATSAPP_URL = "https://wa.me/917996355933?text=Hi%20I%20have%20submitted%20my%20details%20for%20Puravankara%20Northern%20Lights.%20Please%20share%20price%20and%20availability.";
 
-    const form = document.getElementById("leadForm");
-    const message = document.getElementById("formMessage");
+    const inlineForm = document.getElementById("leadForm");
+    const inlineMessage = document.getElementById("formMessage");
+    const popup = document.getElementById("leadPopup");
+    const popupForm = document.getElementById("popupLeadForm");
+    const popupMessage = document.getElementById("popupFormMessage");
+    const closeLeadPopup = document.getElementById("closeLeadPopup");
+    const unlockNowBtn = document.getElementById("unlockNowBtn");
+    const successPopup = document.getElementById("successPopup");
+    const openLeadButtons = document.querySelectorAll('.openLeadPopup');
 
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
+    function openLeadPopup() { if (popup) popup.classList.remove('hidden'); }
+    function closePopup() { if (popup) popup.classList.add('hidden'); }
 
-      const formData = new FormData(form);
+    function unlockLocation() {
+      const overlay = document.getElementById('mapOverlay');
+      const map = document.getElementById('projectMap');
+      const btn = document.getElementById('mapBtn');
+      if (overlay) overlay.style.display = 'none';
+      if (map) map.classList.remove('pointer-events-none');
+      if (btn) {
+        btn.href = 'https://maps.app.goo.gl/QtpE3Au9ur8yucZV8';
+        btn.target = '_blank';
+        btn.rel = 'noopener noreferrer';
+        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+    }
+
+    async function submitLead(formEl, messageEl) {
+      const formData = new FormData(formEl);
       const payload = {
-        name: formData.get("name"),
-        phone: formData.get("phone"),
-        budget: formData.get("budget"),
-        purpose: formData.get("purpose"),
-        source: "Northern Lights Landing Page"
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        budget: formData.get('budget'),
+        purpose: formData.get('purpose'),
+        source: 'Northern Lights Landing Page'
       };
 
-      const successPopup = document.getElementById("successPopup");
-      if (successPopup) successPopup.classList.remove("hidden");
-      if (message) message.textContent = "Submitting...";
+      if (messageEl) messageEl.textContent = 'Submitting...';
+      if (successPopup) successPopup.classList.remove('hidden');
 
       try {
         await fetch(SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors",
+          method: 'POST',
+          mode: 'no-cors',
           body: JSON.stringify(payload),
-          headers: {
-            "Content-Type": "application/json"
-          }
+          headers: { 'Content-Type': 'application/json' }
         });
 
-        form.reset();
-
-        const overlay = document.getElementById("mapOverlay");
-        const map = document.getElementById("projectMap");
-        const btn = document.getElementById("mapBtn");
-
-        if (overlay) overlay.style.display = "none";
-        if (map) map.classList.remove("pointer-events-none");
-
-        if (btn) {
-          btn.href = "https://maps.app.goo.gl/QtpE3Au9ur8yucZV8";
-          btn.target = "_blank";
-          btn.rel = "noopener noreferrer";
-          btn.classList.remove("opacity-50", "cursor-not-allowed");
-        }
-
-        if (message) {
-          message.textContent = "Thank you! Redirecting to location 👇";
-        }
+        formEl.reset();
+        unlockLocation();
+        closePopup();
+        if (messageEl) messageEl.textContent = 'Thank you! Redirecting to WhatsApp...';
 
         setTimeout(() => {
-          if (successPopup) successPopup.classList.add("hidden");
-          const locationSection = document.getElementById("location");
-          if (locationSection) {
-            locationSection.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 1500);
-
+          if (successPopup) successPopup.classList.add('hidden');
+          window.open(WHATSAPP_URL, '_blank', 'noopener,noreferrer');
+        }, 1200);
       } catch (error) {
-        if (successPopup) successPopup.classList.add("hidden");
-        if (message) message.textContent = "Submission failed. Please try again.";
+        if (successPopup) successPopup.classList.add('hidden');
+        if (messageEl) messageEl.textContent = 'Submission failed. Please try again.';
         console.error(error);
       }
+    }
+
+    if (inlineForm) inlineForm.addEventListener('submit', async (e) => { e.preventDefault(); await submitLead(inlineForm, inlineMessage); });
+    if (popupForm) popupForm.addEventListener('submit', async (e) => { e.preventDefault(); await submitLead(popupForm, popupMessage); });
+    if (unlockNowBtn) unlockNowBtn.addEventListener('click', openLeadPopup);
+    openLeadButtons.forEach(btn => btn.addEventListener('click', openLeadPopup));
+    if (closeLeadPopup) closeLeadPopup.addEventListener('click', closePopup);
+    if (popup) popup.addEventListener('click', (e) => { if (e.target === popup) closePopup(); });
+
+    setTimeout(() => {
+      const overlay = document.getElementById('mapOverlay');
+      const locationStillLocked = overlay && overlay.style.display !== 'none';
+      if (locationStillLocked) openLeadPopup();
+    }, 30000);
+
+    document.addEventListener('mouseleave', (e) => {
+      const overlay = document.getElementById('mapOverlay');
+      const locationStillLocked = overlay && overlay.style.display !== 'none';
+      if (e.clientY <= 0 && locationStillLocked && popup.classList.contains('hidden')) {
+        openLeadPopup();
+      }
+    });
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    if (mobileMenuBtn && mobileMenu && mobileMenuIcon) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuIcon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+      });
+    }
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuIcon.textContent = 'menu';
+      });
     });
   </script>
 
-  <!-- Animation Script -->
   <script>
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.from(".hero-content > *", {
-      y: 40,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.15,
-      ease: "power3.out"
-    });
-
-    gsap.from(".hero-cards > div", {
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.1,
-      ease: "power3.out",
-      delay: 0.3
-    });
-
-    gsap.utils.toArray(".reveal-section").forEach((section) => {
+    gsap.from('.hero-content > *', { y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out' });
+    gsap.from('.hero-cards > div', { y: 50, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', delay: 0.3 });
+    gsap.utils.toArray('.reveal-section').forEach((section) => {
       gsap.from(section, {
         y: 80,
         opacity: 0,
         duration: 1.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: section,
-          start: "top 82%",
-          toggleActions: "play none none none"
-        }
+        ease: 'power3.out',
+        scrollTrigger: { trigger: section, start: 'top 82%', toggleActions: 'play none none none' }
       });
     });
-
-    gsap.utils.toArray(".parallax-image").forEach((img) => {
-      gsap.fromTo(
-        img,
-        { y: -20 },
-        {
-          y: 20,
-          ease: "none",
-          scrollTrigger: {
-            trigger: img,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true
-          }
-        }
-      );
+    gsap.utils.toArray('.parallax-image').forEach((img) => {
+      gsap.fromTo(img, { y: -20 }, { y: 20, ease: 'none', scrollTrigger: { trigger: img, start: 'top bottom', end: 'bottom top', scrub: true } });
     });
-
     ScrollTrigger.matchMedia({
-      "(min-width: 1024px)": function () {
-        ScrollTrigger.create({
-          trigger: ".video-section",
-          start: "top top",
-          end: "+=350",
-          pin: true,
-          scrub: 1
-        });
+      '(min-width: 1024px)': function () {
+        ScrollTrigger.create({ trigger: '.video-section', start: 'top top', end: '+=350', pin: true, scrub: 1 });
       }
     });
   </script>
