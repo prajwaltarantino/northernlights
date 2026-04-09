@@ -63,6 +63,13 @@
     transform: translateX(-50%);
   }
 }
+.parallax-smooth {
+  will-change: transform;
+  transform: translateZ(0);
+}
+.hero-section img {
+  transform: scale(1.15);
+}
   </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-fixed">
@@ -107,8 +114,8 @@
   </nav>
 
   <section class="hero-section relative min-h-screen flex items-center pt-20 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img alt="" class="w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRYOk5jEFF3XLO9tZ6Az2khfKk1xZJp7QjcZVcNHaF56OguvEv0mvJ1vPVTjsBGuYbLLuDF2Wx3lowafG0l77nZym3YCadg4DgzFX8jZe5hlX96GwcdBLtnU-NaMG3-7l263CKxR1ybJp492YWO4waNz1zlfFJukYtFafHr6UGW4lPJng7LVHS5rBdjq5jeY5sfxtUcER23Yad3oPBW_xQQg-WjtJYoduQ5QXLVJxTEZHhXBh8L0AabEofJZDafHKjW-Y2RWjkYU"/>
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <img class="parallax-image w-full h-full object-cover opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRYOk5jEFF3XLO9tZ6Az2khfKk1xZJp7QjcZVcNHaF56OguvEv0mvJ1vPVTjsBGuYbLLuDF2Wx3lowafG0l77nZym3YCadg4DgzFX8jZe5hlX96GwcdBLtnU-NaMG3-7l263CKxR1ybJp492YWO4waNz1zlfFJukYtFafHr6UGW4lPJng7LVHS5rBdjq5jeY5sfxtUcER23Yad3oPBW_xQQg-WjtJYoduQ5QXLVJxTEZHhXBh8L0AabEofJZDafHKjW-Y2RWjkYU"/>
       <div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
     </div>
     <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
@@ -160,8 +167,8 @@
     <div class="max-w-7xl mx-auto px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div class="relative">
-          <div class="aspect-[4/5] rounded-lg overflow-hidden"><img alt="" class="parallax-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApRLPKP-0tX2HkFiHDqoQTFwrAwrDMbQ1faqGttk-K9QMdzPsqBcVUzJ0SselHn-mcAeIMo5d1wBWTCTMzmm-kTS_ST06phZ8k07JmveLAT8Jg9UsyJM41zbuiduPfW149ctQvpqOlXAdN_MzCjmzrCdaN51t8ueq05vKioLKvxdRvLXQ8sEg4M5WCN1PLBxkUAlHbMqSWmxEfJsn-E-umEpvNd179Z8xilROr30md2A28SrxWPQrroCdvdOgn7ELo81aQI1zLP5E"/></div>
-          <div class="absolute -bottom-8 -right-8 w-1/2 aspect-square rounded-lg overflow-hidden border-8 border-background hidden md:block"><img alt="" class="parallax-image w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDelvcmW-NUjv0K00Twb1t2X4EABOGzgWR3HSTuCT46yLLa3YS496fmrkKRC5Cruk1m4AetCKVBEZLbi5i_x7eBmbMVgJ9Iv_NZ3w1_BXB5dQWEYOL7NXqsQoNCwp0tyBAO8cROF_IOjwkVANX6067C_YgLMDyuEx6lJvsmx6GzwPsfAVsijtb_2NQJbQQKEo0fxDEbN-NMQNFEGzwyD3MiLAOyIy9uZSxWhvpD7PUvFLCg3PiSYV4XBpLOfOKcJTq_Sm4mUzHI7m0"/></div>
+          <div class="aspect-[4/5] rounded-lg overflow-hidden"><img class="parallax-image parallax-smooth w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApRLPKP-0tX2HkFiHDqoQTFwrAwrDMbQ1faqGttk-K9QMdzPsqBcVUzJ0SselHn-mcAeIMo5d1wBWTCTMzmm-kTS_ST06phZ8k07JmveLAT8Jg9UsyJM41zbuiduPfW149ctQvpqOlXAdN_MzCjmzrCdaN51t8ueq05vKioLKvxdRvLXQ8sEg4M5WCN1PLBxkUAlHbMqSWmxEfJsn-E-umEpvNd179Z8xilROr30md2A28SrxWPQrroCdvdOgn7ELo81aQI1zLP5E"/></div>
+          <div class="absolute -bottom-8 -right-8 w-1/2 aspect-square rounded-lg overflow-hidden border-8 border-background hidden md:block"><img class="parallax-image parallax-smooth w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDelvcmW-NUjv0K00Twb1t2X4EABOGzgWR3HSTuCT46yLLa3YS496fmrkKRC5Cruk1m4AetCKVBEZLbi5i_x7eBmbMVgJ9Iv_NZ3w1_BXB5dQWEYOL7NXqsQoNCwp0tyBAO8cROF_IOjwkVANX6067C_YgLMDyuEx6lJvsmx6GzwPsfAVsijtb_2NQJbQQKEo0fxDEbN-NMQNFEGzwyD3MiLAOyIy9uZSxWhvpD7PUvFLCg3PiSYV4XBpLOfOKcJTq_Sm4mUzHI7m0"/></div>
         </div>
         <div class="space-y-8">
           <h2 class="text-5xl font-headline leading-tight">Premium Township Living in <span class="text-primary italic">North Bangalore</span></h2>
@@ -410,27 +417,45 @@
     });
   </script>
 
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.from('.hero-content > *', { y: 40, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out' });
-    gsap.from('.hero-cards > div', { y: 50, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', delay: 0.3 });
-    gsap.utils.toArray('.reveal-section').forEach((section) => {
-      gsap.from(section, {
-        y: 80,
-        opacity: 0,
-        duration: 1.1,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: section, start: 'top 82%', toggleActions: 'play none none none' }
-      });
-    });
-    gsap.utils.toArray('.parallax-image').forEach((img) => {
-      gsap.fromTo(img, { y: -20 }, { y: 20, ease: 'none', scrollTrigger: { trigger: img, start: 'top bottom', end: 'bottom top', scrub: true } });
-    });
-    ScrollTrigger.matchMedia({
-      '(min-width: 1024px)': function () {
-        ScrollTrigger.create({ trigger: '.video-section', start: 'top top', end: '+=350', pin: true, scrub: 1 });
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Ultra smooth parallax (Framer style)
+  gsap.utils.toArray(".parallax-image").forEach((img) => {
+    gsap.to(img, {
+      yPercent: 20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: img,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1.2
       }
     });
-  </script>
+  });
+
+  // Section reveal (premium feel)
+  gsap.utils.toArray(".reveal-section").forEach((section) => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 100,
+      duration: 1.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 85%"
+      }
+    });
+  });
+
+  // Hero text smooth entrance
+  gsap.from(".hero-content > *", {
+    y: 60,
+    opacity: 0,
+    duration: 1.2,
+    stagger: 0.15,
+    ease: "power4.out"
+  });
+</script>
 </body>
 </html>
